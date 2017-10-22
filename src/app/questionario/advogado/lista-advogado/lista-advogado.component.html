@@ -1,3 +1,23 @@
-<p>
-  lista-advogado works!
-</p>
+<div>
+  <h2>
+    {{ nome }}, aqui vão sugestões de advogados que podem assumir o seu processo.    
+  </h2>
+  <h6>
+    Contratar um profissional garante que toda a sua ação judicial corra da melhor maneira possível!
+  </h6>
+  <h3>
+    Confira alguns advogados cadastrados na nossa base
+  </h3>
+  <h6>
+    A partir de agora, o seu contato será diretamente com o advogado. O time do Consumidor em Ação não interfere nesse processo, ok? Esperamos que o seu problema seja solucionado o mais breve possível! 
+  </h6>
+  <table>
+    <tr *ngFor="let advogado of advogadoList; index as i; first as isFirst">
+      <td>{{advogado.nome}} - {{advogado.oab}} - {{advogado.telefone}}</td>
+      <td><button (click)="detalhar(advogado)">Ver + Informações</button></td>
+    </tr>
+  </table>
+  <footer class="ftr_int">
+      <a><p class="voltar">Voltar um passo</p></a>
+  </footer>
+</div>
