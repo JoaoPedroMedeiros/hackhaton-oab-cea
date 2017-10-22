@@ -36,9 +36,9 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
     // BootstrapModalModule.forRoot({container:document.body})
 
     RouterModule.forChild([
-      { path: 'questionario', redirectTo: 'questionario/problema' },
       { path: 'questionario', component: QuestionarioComponent, children: [
         { path: 'problema', component: ProblemaComponent },
+<<<<<<< HEAD
         { path: 'nome', component: NomeComponent },
         { path: 'valor20', component: Valor20Component },
         { path: 'valor40', component: Valor40Component },
@@ -51,6 +51,9 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
         { path: 'provas', component: ProvasComponent},
         { path: 'finalizacao', component: FinalizacaoComponent},
         { path: 'peticao', component: PeticaoComponent}
+=======
+        { path: 'nome', component: NomeComponent }  
+>>>>>>> 65a23112c547f2ff452be46bb71eccc30f71788f
       ]},
     ])
   ],
