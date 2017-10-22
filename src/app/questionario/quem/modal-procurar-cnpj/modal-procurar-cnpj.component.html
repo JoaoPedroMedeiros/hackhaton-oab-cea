@@ -1,3 +1,13 @@
-<p>
-  modal-procurar-cnpj works!
-</p>
+<div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-body">
+          <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int" name="nome" id="eNome"/>
+          <div *ngFor="let empresa of empresas; index as i; first as isFirst" class="input-group">
+            {{empresa.razaosocial}} - CNPJ {{empresa.cnpj}}
+            <div>
+              <button (click)="retornar(empresa)">Selecionar empresa</button>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

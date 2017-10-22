@@ -10,4 +10,9 @@ export class Empresa {
   bairro: string;
   numero: string;
   complemento: string;
+
+  constructor(cnpj: string, razaosocial: string) {
+    this.cnpj = cnpj;
+    this.razaosocial = razaosocial;
+  }
 }

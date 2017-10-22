@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PerguntaComponent } from '../pergunta-component-custom';
 import { RespostaService } from '../service/resposta.service';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Empresa } from '../model/Empresa';
+import { Http } from '@angular/http';
+import { DialogService } from 'ng2-bootstrap-modal';
+import { ModalProcurarCnpjComponent } from './modal-procurar-cnpj/modal-procurar-cnpj.component';
 
 @Component({
   selector: 'app-quem',
@@ -10,8 +14,26 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 })
 export class QuemComponent extends PerguntaComponent {
 
-  constructor(protected respostaService: RespostaService) {
+  empresa: Empresa;
+
+  constructor(protected respostaService: RespostaService, private dialogService: DialogService, private http: Http) {
     super(respostaService);
+
+    this.empresa = respostaService.getRespostas().empresa;
+  }
+
+  consultar() {
+    
+  }
+
+  abrirModalBuscarEmpresa() {
+    let disposable = this.dialogService.addDialog(ModalProcurarCnpjComponent).
+    subscribe((isConfirmed) => {
+        
+      });
+    setTimeout(() => {
+      disposable.unsubscribe();
+    }, 100000)
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {

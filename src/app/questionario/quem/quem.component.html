@@ -1,3 +1,39 @@
-<p>
-  quem works!
-</p>
+<div class="titulo">
+  <h2 class="section_h2 int">Ok, Wanner. Vamos dar sequência a sua petição.</h2>
+  <h6 class="section_h5 int">Essa é a hora de saber mais sobre a empresa que será processada. Você nos ajuda compartilhando informações sobre ela?
+  </h6><br>
+</div>
+<div>
+  <div style="height: 70px"></div>
+  <div class="form-group form_int">
+    <div>
+      <p class="p_mensagem">
+        <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual empresa você deseja processar?<br/>
+        Colocar os dados corretos da empresa que você deseja processar é fundamental para que a intimação chegue até ela sem problemas.
+      </p>
+    </div>
+    <div style="width:100%;" class="input-group">
+      <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int" name="nome" id="eNome"/>
+      <button type="button" class="btn btn_processo" id="btn_prox" routerLink="/questionario/quem" routerLinkActive="active">OK</button>
+    </div>
+    <div>
+      <p class="p_mensagem"><b>Empresa a processar:</b> Sony a pior empresa do mundo</p>
+      <button (click)="abrirModalBuscarEmpresa()">Buscar empresas cadastradas</button>
+    </div>
+    <div style="width:100%; text-align: right" class="input-group">
+        <button type="button" style="width: 200px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/quem" routerLinkActive="active">Próximo passo</button>
+    </div>
+      <!--#e3e9f4-->
+    
+  </div>
+</div>
+<div id="openModal" class="modalDialog">
+  <div>
+    <a href="#modal-close" title="Close" class="close-modal">Close</a>
+    <h1>Voilà!</h1>
+    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+  </div>
+</div>
+<footer class="ftr_int">
+  <a><p class="voltar">Voltar um passo</p></a>
+</footer>
