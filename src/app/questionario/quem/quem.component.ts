@@ -22,15 +22,12 @@ export class QuemComponent extends PerguntaComponent {
     this.empresa = respostaService.getRespostas().empresa;
   }
 
-  consultar() {
-    
-  }
-
   abrirModalBuscarEmpresa() {
     let disposable = this.dialogService.addDialog(ModalProcurarCnpjComponent).
-    subscribe((isConfirmed) => {
-        
-      });
+    subscribe((empresa) => {
+      this.respostaService.getRespostas().empresa = empresa;
+      this.empresa = this.respostaService.getRespostas().empresa;
+    });
     setTimeout(() => {
       disposable.unsubscribe();
     }, 100000)

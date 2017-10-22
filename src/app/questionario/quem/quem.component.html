@@ -13,27 +13,17 @@
       </p>
     </div>
     <div style="width:100%;" class="input-group">
-      <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int" name="nome" id="eNome"/>
-      <button type="button" class="btn btn_processo" id="btn_prox" routerLink="/questionario/quem" routerLinkActive="active">OK</button>
+      <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/> 
     </div>
     <div>
-      <p class="p_mensagem"><b>Empresa a processar:</b> Sony a pior empresa do mundo</p>
+      <p class="p_mensagem"><b>Empresa a processar:</b> {{empresa.razaosocial}}</p>
       <button (click)="abrirModalBuscarEmpresa()">Buscar empresas cadastradas</button>
     </div>
     <div style="width:100%; text-align: right" class="input-group">
-        <button type="button" style="width: 200px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/quem" routerLinkActive="active">Próximo passo</button>
+        <button type="button" style="width: 200px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/dados-cliente" routerLinkActive="active">Próximo passo</button>
     </div>
-      <!--#e3e9f4-->
-    
-  </div>
-</div>
-<div id="openModal" class="modalDialog">
-  <div>
-    <a href="#modal-close" title="Close" class="close-modal">Close</a>
-    <h1>Voilà!</h1>
-    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
   </div>
 </div>
 <footer class="ftr_int">
-  <a><p class="voltar">Voltar um passo</p></a>
+  <button class="btn-link" routerLink="/questionario/sozinho" routerLinkActive="active"><p class="voltar">Voltar um passo</p></button>
 </footer>
