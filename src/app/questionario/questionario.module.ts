@@ -36,7 +36,19 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
 
     RouterModule.forChild([
       { path: 'questionario', component: QuestionarioComponent, children: [
-        { path: 'problema', component: ProblemaComponent }
+        { path: 'problema', component: ProblemaComponent },
+        { path: 'nome', component: NomeComponent },
+        { path: 'valor20', component: Valor20Component },
+        { path: 'valor40', component: Valor40Component },
+        { path: 'advogado/precisa-advogado', component: PrecisaAdvogadoComponent},
+        { path: 'advogado/lista-dvogado', component: ListaAdvogadoComponent },
+        { path: 'corpo-peticao', component: CorpoPeticaoComponent},
+        { path: 'sozinho', component: SozinhoComponent},
+        { path: 'quem', component: QuemComponent},
+        { path: 'dados-cliente', component: DadosClienteComponent},
+        { path: 'provas', component: ProvasComponent},
+        { path: 'finalizacao', component: FinalizacaoComponent},
+        { path: 'peticao', component: PeticaoComponent}
       ]},
     ])
   ],
