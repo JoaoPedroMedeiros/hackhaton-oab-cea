@@ -25,6 +25,30 @@ i {
     height: 50px !important;
     margin-top: 10px;
   }
+  .btn_choose {
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+  .btn_resp_azul {
+    background-color: #008EF5;
+  }
+  .btn_resp_verde {
+    background-color: #40CCB8;
+  }
+  .btn_turquese {
+    background-color: #40CCB8;
+  }
+  .btn_darkblue {
+    background-color: #35445B;
+  }
+  .btn_resp {
+    margin: 20px;
+    font-weight: bold !important;
+    width: 200px;
+    height: 70px;
+    color: #fff;
+    border-radius: 1rem !important;
+  }
   .btn_processo {
     color: #fff;
     background-color: #008EF5;
