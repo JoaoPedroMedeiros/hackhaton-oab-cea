@@ -22,6 +22,7 @@ import { Valor40Component } from './valor40/valor40.component';
 import { PrecisaAdvogadoComponent } from './advogado/precisa-advogado/precisa-advogado.component';
 import { ListaAdvogadoComponent } from './advogado/lista-advogado/lista-advogado.component';
 import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -36,7 +37,7 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
 
     RouterModule.forChild([
       { path: 'questionario', component: QuestionarioComponent, children: [
-        { path: 'problema', component: ProblemaComponent }
+        
       ]},
     ])
   ],

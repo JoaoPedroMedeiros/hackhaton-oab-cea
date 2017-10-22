@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { PerguntaComponent } from '../pergunta-component-custom';
+import { RespostaService } from '../service/resposta.service';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-valor20',
   templateUrl: './valor20.component.html',
   styleUrls: ['./valor20.component.css']
 })
-export class Valor20Component implements OnInit, CanActivate {
+export class Valor20Component extends PerguntaComponent {
   
-  constructor() { }
-
-  ngOnInit() {
+  constructor(protected respostaService: RespostaService) {
+    super(respostaService);
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    console.log('aaa');
-    return false;
+    return true;
+  }
+  titulo(): string {
+    return '';
+  }
+  descricao(): string {
+    return '';
   }
 }
