@@ -37,6 +37,6 @@ export class Respostas {
 
   constructor() {
     this.dadosCliente = new DadosCliente();
-    this.empresa = new Empresa();
+    this.empresa = new Empresa(null, null);
   }
 }
