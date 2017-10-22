@@ -73,6 +73,7 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
     InfoAdvogadoComponent,
   ],
   entryComponents: [
+    ModalProcurarCnpjComponent
   ],
   exports: [
     QuestionarioComponent
