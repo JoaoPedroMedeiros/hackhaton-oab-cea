@@ -12,6 +12,11 @@ a :focus :hover {
 i {
     text-decoration: none !important;
 }
+.h6_cinza {
+    color: #B3B6B9;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .input_int {
     width: 80% !important;
     background-color: #EEEEF6 !important;
