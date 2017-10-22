@@ -37,7 +37,8 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
 
     RouterModule.forChild([
       { path: 'questionario', component: QuestionarioComponent, children: [
-        
+        { path: 'problema', component: ProblemaComponent },
+        { path: 'nome', component: NomeComponent }  
       ]},
     ])
   ],

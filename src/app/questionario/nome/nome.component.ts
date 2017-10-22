@@ -18,9 +18,9 @@ export class NomeComponent extends PerguntaComponent {
     return true;
   }
   titulo(): string {
-    return '';
+    return 'Relaxe, nós vamos te ajudar a resolver esta situação!';
   }
   descricao(): string {
-    return '';
+    return 'Que pena que você passou por isso. Mas fique tranquilo. Nós vamos te ajudar a dar entrada no seu processo.';
   }
 }
