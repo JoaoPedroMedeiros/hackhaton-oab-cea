@@ -1,13 +1,19 @@
 <div class="modal-dialog">
   <div class="modal-content">
       <div class="modal-body">
-          <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int" name="nome" id="eNome"/>
-          <div *ngFor="let empresa of empresas; index as i; first as isFirst" class="input-group">
-            {{empresa.razaosocial}} - CNPJ {{empresa.cnpj}}
-            <div>
-              <button (click)="retornar(empresa)">Selecionar empresa</button>
-            </div>
-          </div>
+        <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int" name="nome" id="eNome"/>
+        <bootstrap-grid>
+          <container>
+            <row *ngFor="let empresa of empresas; index as i; first as isFirst" class="input-group">
+              <column sm="8" md="8" lg="8">
+                {{empresa.razaosocial}} - CNPJ {{empresa.cnpj}}
+              </column>
+              <column sm="4" md="4" lg="4">
+                <button (click)="retornar(empresa)">Selecionar empresa</button>
+              </column>
+            </row>
+          </container>
+        </bootstrap-grid>
       </div>
     </div>
 </div>

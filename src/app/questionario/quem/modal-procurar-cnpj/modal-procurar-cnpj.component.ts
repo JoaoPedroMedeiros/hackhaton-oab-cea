@@ -21,7 +21,7 @@ export class ModalProcurarCnpjComponent extends DialogComponent<any, Empresa> {
   }
 
   retornar(empresa: Empresa) {
-    
+    this.result = empresa;
     this.close();
   }
 }

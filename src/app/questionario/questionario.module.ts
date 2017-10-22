@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
+import { BootstrapGridModule } from 'ng2-bootstrap-grid';
 import { RespostaService } from './service/resposta.service';
 import { ProblemaComponent } from './problema/problema.component';
 import { QuestionarioComponent } from './questionario.component';
@@ -34,6 +35,7 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
     // É possível mudar o placeholder onde será aberto o modal importando
     // desse jeito (Mas não vamos usar isso):
     // BootstrapModalModule.forRoot({container:document.body})
+    BootstrapGridModule,
 
     RouterModule.forChild([
       { path: 'questionario', redirectTo: 'questionario/problema' },
