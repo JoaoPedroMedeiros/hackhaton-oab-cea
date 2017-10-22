@@ -1,0 +1,83 @@
+a {text-decoration:none !important;}
+li {list-style: none !important}
+.header_quest {
+  background-image: url("/assets/img/barra.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 150px;
+}
+.nav_li_int {
+  text-align: right;
+  padding-top: 1%;
+  margin-right: 20%;
+}
+.nav_li_int a{
+  color: #fff !important;
+  font-size: 1.2em;
+}
+.nav_li_int i {
+  font-size: 1.8em;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.hd_inicio {
+  background-color: #25354B;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 75px;
+}
+.logo_sist {
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.sessao_int {
+  margin-top: -50px;
+  text-align: left;
+}
+.titulo{
+  text-align: left;
+}
+.section_h2{
+  color: #626A78;
+  font-weight: bolder;
+  font-style: italic
+}
+.section_h5{
+  color: #626A78;
+  font-weight: 400;
+  font-style: italic
+}
+.ftr_sist {
+  background-color: #25354B;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+}
+.ul_rodape{
+  text-align: center;
+}
+.li_rodape{
+  display: inline-block !important;
+  text-decoration: none;
+  padding: 20px;
+  color: #fff;
+}
+.li_rodape a{
+  color: #fff;
+  display: block !important;
+  text-align: center;
+  font-size: .8em;
+}
+.li_rodape a:hover{
+  text-shadow: 0.1em 0.1em 0.2em black;
+  color: #fff !important;
+  text-decoration: none;
+}
+.int {
+  text-align: left !important;
+  margin-left: 13%;
+  margin-right: 13%;
+}

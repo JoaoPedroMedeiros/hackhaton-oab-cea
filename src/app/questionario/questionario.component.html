@@ -1,0 +1,17 @@
+<header class="header_quest">
+  <nav class="nv_header_int">
+    <div class="navegacao_int">
+        <p class="nav_li_int"><a routerLink="/home/">Cancelar Processo  <img style="width:30px; margin-top:-2px;" src="assets/img/btn_close.png" alt="logo"></a></p>
+    </div>
+  </nav>
+</header>
+
+<section class="sessao_int container">
+  <div class="titulo">
+    <h2 class="section_h2 int">{{titulo}}</h2>
+    <h6 class="section_h5 int">{{descricao}}</h6><br>
+    <div class="int">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

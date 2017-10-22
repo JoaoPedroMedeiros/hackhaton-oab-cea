@@ -5,11 +5,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SiteModule } from './site/site.module';
 import { HomeComponent } from './site/home/home.component';
+import { QuestionarioComponent } from './questionario/questionario.component';
+import { QuestionarioModule } from './questionario/questionario.module';
 
 const appRoutes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({
@@ -19,6 +20,8 @@ const appRoutes = [
   imports: [
     BrowserModule,
     SiteModule,
+    RouterModule,
+    QuestionarioModule,
 
     RouterModule.forRoot(appRoutes)
   ],
