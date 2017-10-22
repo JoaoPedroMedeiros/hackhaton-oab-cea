@@ -1,13 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    text-decoration: none !important;
+    list-style-type: none !important;
+    color: rgb(175, 175, 175) !important
+}
+a :focus :hover {
+    text-decoration: none !important;
+    list-style-type: none !important;
+    color: #eee !important;
+}
+i {
+    text-decoration: none !important;
+}
 .input_int {
     width: 80% !important;
-    background-color: #EEEEF6;
-    height: 50px;
+    background-color: #EEEEF6 !important;
+    border-color: #EEEEF6 !important;
+    border-radius: 7px !important;
+    height: 50px !important;
     margin-top: 10px;
   }
   .btn_processo {
     color: #fff;
     background-color: #008EF5;
+    border-radius: 7px !important;
     width: 100px;
     margin-left: 3px;
     font-weight: bolder;
