@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { PerguntaComponent } from '../pergunta-component-custom';
+import { RespostaService } from '../service/resposta.service';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-dados-cliente',
   templateUrl: './dados-cliente.component.html',
   styleUrls: ['./dados-cliente.component.css']
 })
-export class DadosClienteComponent implements OnInit {
+export class DadosClienteComponent extends PerguntaComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(protected respostaService: RespostaService) {
+    super(respostaService);
   }
 
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    return true;
+  }
+  titulo(): string {
+    return '';
+  }
+  descricao(): string {
+    return '';
+  }
 }

@@ -22,6 +22,7 @@ import { Valor40Component } from './valor40/valor40.component';
 import { PrecisaAdvogadoComponent } from './advogado/precisa-advogado/precisa-advogado.component';
 import { ListaAdvogadoComponent } from './advogado/lista-advogado/lista-advogado.component';
 import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -37,6 +38,7 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
     RouterModule.forChild([
       { path: 'questionario', component: QuestionarioComponent, children: [
         { path: 'problema', component: ProblemaComponent },
+<<<<<<< HEAD
         { path: 'nome', component: NomeComponent },
         { path: 'valor20', component: Valor20Component },
         { path: 'valor40', component: Valor40Component },
@@ -49,6 +51,9 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
         { path: 'provas', component: ProvasComponent},
         { path: 'finalizacao', component: FinalizacaoComponent},
         { path: 'peticao', component: PeticaoComponent}
+=======
+        { path: 'nome', component: NomeComponent }  
+>>>>>>> 65a23112c547f2ff452be46bb71eccc30f71788f
       ]},
     ])
   ],
