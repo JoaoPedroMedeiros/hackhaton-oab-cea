@@ -2,25 +2,31 @@
   <div>
     <div class="titulo">
       <h2 class="section_h2 int">Só mais uma pergunta...</h2>
-      <h6 class="section_h5 int">É um prazer falar com você. A partir de agora nós vamos te fazer uma série de 
-        perguntas para podermos entender e montar sua petição.<br> 
-        Por favor seja o mais sincero e claro possível nas suas respostas.</h6><br>
+      <h6 class="section_h5 int">É um prazer falar com você. A partir de agora nós vamos te fazer uma série de perguntas para podermos entender e montar
+        sua petição.
+        <br> Por favor seja o mais sincero e claro possível nas suas respostas.</h6>
+      <br>
     </div>
     <div style="height: 40px"></div>
     <div>
-      <p class="p_mensagem"><img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual o valor da <strong>indenização</strong> que se encaixa no que você busca?</p>
+      <p class="p_mensagem">
+        <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual o valor da
+        <strong>indenização</strong> que se encaixa no que você busca?</p>
     </div>
-    <h6 class="h6_cinza">Aqui vai uma pequena orientação. Se você abrir um processo até 20 salários mínimos,<br> 
-      você não precisa necessariamente de um advogado. Caso o valor seja maior do 
-      que 20 salários mínimos,<br> nós iremos te redirecionar para {{nome}}.<br><br>
+    <h6 class="h6_cinza">Aqui vai uma pequena orientação. Se você abrir um processo até 20 salários mínimos,
+      <br> você não precisa necessariamente de um advogado. Caso o valor seja maior do que 20 salários mínimos,
+      <br> nós iremos te redirecionar para {{nome}}.
+      <br>
+      <br>
     </h6>
-    <div class="btn_choose">                  
+    <div class="btn_choose">
       <button class="btn btn_resp btn_turquese" routerLink="/questionario/advogado/lista-advogado" routerLinkActive="active">
-        Até 40 Salários Mínimos<br>(até 37.480,00)</button>
+        Até 40 Salários Mínimos
+        <br>(até 37.480,00)</button>
       <button class="btn btn_resp btn_darkblue" routerLink="/questionario/advogado/precisa-advogado">
-        + de 40 Salários Mínimos</button> 
+        + de 40 Salários Mínimos</button>
     </div>
     <footer class="ftr_int">
-        <a><p class="voltar">Voltar um passo</p></a>
-      </footer>
+      <button class="btn_voltar btn-link" routerLink="/questionario/valor20" routerLinkActive="active">Voltar um passo</button>
+    </footer>
   </div>
