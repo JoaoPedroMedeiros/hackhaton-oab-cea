@@ -25,6 +25,14 @@ i {
     height: 50px !important;
     margin-top: 10px;
   }
+
+.linha_grid {
+  background-color: #EEEEF6; 
+  border-color: #EEEEF6 !important; 
+  border-radius: 7px !important;
+  margin-top: 10px; 
+  padding: 10px;
+}
   .btn_choose {
     margin-left: 18%;
     margin-right: 18%;
@@ -48,6 +56,13 @@ i {
     height: 70px;
     color: #fff;
     border-radius: 1rem !important;
+  }
+  .btn_fino {
+    height: 28px;
+    font-size: 10px;
+    font-weight: bold !important;
+    border-radius: 0.5rem !important;
+    color: #fff;
   }
   .btn_processo {
     color: #fff;

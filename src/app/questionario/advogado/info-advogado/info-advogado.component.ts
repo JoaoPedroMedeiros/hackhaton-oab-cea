@@ -2,25 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { PerguntaComponent } from '../../pergunta-component-custom';
 import { RespostaService } from '../../service/resposta.service';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { DialogComponent, DialogService } from 'ng2-bootstrap-modal';
+import { Advogado } from '../../model/Advogado';
 
 @Component({
   selector: 'app-info-advogado',
   templateUrl: './info-advogado.component.html',
   styleUrls: ['./info-advogado.component.css']
 })
-export class InfoAdvogadoComponent extends PerguntaComponent {
-  
-  constructor(protected respostaService: RespostaService) {
-    super(respostaService);
+export class InfoAdvogadoComponent extends DialogComponent<InfoAdvogadoComponent, boolean> {
+
+  advogado: Advogado;
+
+  constructor(dialogService: DialogService) {
+    super(dialogService);
   }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    return true;
+  retornar() {
+    this.close();
   }
-  titulo(): string {
-    return '';
-  }
-  descricao(): string {
-    return '';
-  }
+}
+
+export interface TemAdvogado {
+
+  advogado: Advogado;
 }
