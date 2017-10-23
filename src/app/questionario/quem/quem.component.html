@@ -1,29 +1,36 @@
 <div class="titulo">
   <h2 class="section_h2 int">Ok, Wanner. Vamos dar sequência a sua petição.</h2>
   <h6 class="section_h5 int">Essa é a hora de saber mais sobre a empresa que será processada. Você nos ajuda compartilhando informações sobre ela?
-  </h6><br>
+  </h6>
+  <br>
 </div>
 <div>
   <div style="height: 70px"></div>
   <div class="form-group form_int">
     <div>
       <p class="p_mensagem">
-        <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual empresa você deseja processar?<br/>
+        <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual empresa você deseja processar?
+        <br/>
       </p>
     </div>
-    <h6 class="h6_cinza"> Colocar os dados corretos da empresa que você deseja processar é fundamental para que a intimação chegue até ela sem problemas.</h6>
+    <h6 class="h6_cinza"> Colocar os dados corretos da empresa que você deseja processar é fundamental para que a intimação chegue até ela sem
+      problemas.
+    </h6>
     <div style="width:100%;" class="input-group">
-      <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/> 
-    </div><br>
+      <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/>
+    </div>
+    <br>
     <div>
-      <p class="p_mensagem"><b>Empresa a processar:</b> {{empresa.razaosocial == null ? 'Nenhuma empresa selecionada' : empresa.razaosocial}}</p>
+      <p class="p_mensagem">
+        <b>Empresa a processar:</b> {{empresa.razaosocial == null ? 'Nenhuma empresa selecionada' : empresa.razaosocial}}</p>
       <button class="btn btn_help btn_darkblue" (click)="abrirModalBuscarEmpresa()">Buscar empresas cadastradas</button>
     </div>
     <div style="width:100%; text-align: right" class="input-group">
-        <button type="button" style="width: 200px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/dados-cliente" routerLinkActive="active">Próximo passo</button>
+      <button type="button" style="width: 200px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/dados-cliente"
+        routerLinkActive="active">Próximo passo</button>
     </div>
+    <footer class="ftr_int">
+      <button class="btn-link" routerLink="/questionario/corpo-peticao" routerLinkActive="active"><p class="voltar">Voltar um passo</p></button>
+    </footer>
   </div>
 </div>
-<footer class="ftr_int">
-  <button class="btn-link" routerLink="/questionario/corpo-peticao" routerLinkActive="active"><p class="voltar">Voltar um passo</p></button>
-</footer>

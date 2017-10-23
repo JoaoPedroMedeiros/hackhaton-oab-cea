@@ -1,4 +1,90 @@
-<p>
-  provas works!
-</p>
-<button routerLink="/questionario/finalizacao" routerLinkActive="active"></button>
+<div class="titulo">
+  <h2 class="section_h2 int">Junte suas provas.</h2>
+  <h6 class="section_h5 int">Sabe todos aqueles documentos que demonstram que você foi lesado pela empresa? Chegou a hora de separá-los para usar como
+    provas no seu processo. Vale comprovante, nota fiscal, protocolo de atendimento, etc. O importante é confirmar que sua
+    queixa é verdadeira.</h6>
+</div>
+
+<div style="height: 80px"></div>
+
+<!-- Obrigatório - Comprovante SERASA -->
+<div>
+  <div>
+    <p class="p_mensagem">
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Prova obrigatório - Comprovante de negativação</p>
+    <h6 class="h6_cinza">Sempre que o consumidor é inscrito em um órgão de proteção ao crédito (SPC, SERASA, ETC), tem o seu nome registrado em
+      um banco de dados de inadimplentes. Para descobrir se o seu nome está nessa lista você pode fazer uma consulta pela
+      internet (digite no Google “como saber se estou inscrito no SPC”) ou então dirigir-se à própria sede do Serasa ou SPC
+      da sua cidade.
+    </h6>
+  </div>
+  <div style="width:100%;" class="input-group">
+    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" 
+    />
+  </div>
+</div>
+
+<div style="height: 80px"></div>
+
+<!-- Obrigatório - Comprovante de pagamento -->
+<div>
+  <div>
+    <p class="p_mensagem">
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Prova obrigatório - Comprovante de pagamento</p>
+    <h6 class="h6_cinza">O comprovante de pagamento é o documento que você recebe ao efetuar uma compra. Ele conta com os dados completos da empresa,
+      como o seu endereço e CNPJ.
+    </h6>
+  </div>
+  <div style="width:100%;" class="input-group">
+    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" 
+    />
+  </div>
+</div>
+
+<div style="height: 80px"></div>
+
+<!-- Contrato ou fatura -->
+<div>
+  <div>
+    <p class="p_mensagem">
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Contrato ou fatura</p>
+    <h6 class="h6_cinza">Se possível, compartilhe o contrato ou a fatura que a empresa forneceu no momento em que você adotou o serviço/ produto.
+    </h6>
+  </div>
+  <div style="width:100%;" class="input-group">
+    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" 
+    />
+    <input type="text" placeholder="Número do contrato ou fatura" class="form-control input_int_100" name="nome" id="eNome" />
+  </div>
+</div>
+
+<div style="height: 80px"></div>
+
+<!-- Outras provas -->
+<div>
+  <div>
+    <p class="p_mensagem">
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Outras provas</p>
+    <h6 class="h6_cinza">Você tem alguma outra prova que pode te ajudar nessa ação, como por exemplo um protocolo de atendimento do SAC? Então
+      compartilhe aqui.
+
+    </h6>
+  </div>
+  <div style="width:100%;" class="input-group">
+    <input type="text" style="width: 100%" placeholder="Arquivo..." class="form-control input_int" name="nome" id="eNome"/>
+    <button type="button" style="font-weight: bold; width: 50px"  class="btn btn_processo" id="btn_prox" routerLink="/questionario/valor20" routerLinkActive="active">+</button>
+  </div>
+</div>
+
+<div style="height: 80px"></div>
+
+<div style="width:100%; text-align: right" class="input-group">
+  <button type="button" style="width: 250px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/finalizacao"
+    routerLinkActive="active">Anexar provas e prosseguir</button>
+</div>
+
+<div style="height: 80px"></div>
+
+<div>
+    <button class="btn_voltar btn-link" routerLink="/questionario/dados-cliente" routerLinkActive="active">Voltar um passo</button>  
+</div>

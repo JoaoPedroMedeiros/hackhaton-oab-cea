@@ -34,6 +34,7 @@ i {
   padding: 10px;
 }
 .input_int_100 {
+  width: 100% !important;
   background-color: #EEEEF6 !important;
   border-color: #EEEEF6 !important;
   border-radius: 7px !important;
