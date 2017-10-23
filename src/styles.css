@@ -25,6 +25,19 @@ i {
     height: 50px !important;
     margin-top: 10px;
   }
+  .input_int_100 {
+    background-color: #EEEEF6 !important;
+    border-color: #EEEEF6 !important;
+    border-radius: 7px !important;
+    margin-top: 10px;
+    height: 50px !important
+  }
+  .txt_area_100 {
+    background-color: #EEEEF6 !important;
+    border-color: #EEEEF6 !important;
+    border-radius: 7px !important;
+    margin-bottom: 20px;
+  }
   .btn_choose {
     margin-left: 18%;
     margin-right: 18%;
@@ -41,6 +54,11 @@ i {
   .btn_darkblue {
     background-color: #35445B;
   }
+  .btn_help {
+    color: #fff !important;
+    font-weight: bold !important;
+    border-radius: 7px !important;
+  }
   .btn_resp {
     margin: 20px;
     font-weight: bold !important;
@@ -55,7 +73,7 @@ i {
     border-radius: 7px !important;
     width: 100px;
     margin-left: 3px;
-    font-weight: bolder;
+    font-weight: bolder !important;
     height: 50px;
     font-size: 1.2em;
     margin-top: 10px;
@@ -63,6 +81,22 @@ i {
   .tabela {
     background-color: #EEEEF6 !important;
     font-size: .8em;
+  }
+  .btn_proximo {
+    color: #fff;
+    background-color: #008EF5;
+    border-radius: 7px !important;
+    width: 150px;
+    margin-left: 3px;
+    font-weight: bolder !important;
+    height: 50px;
+    font-size: 1.2em;
+    margin-top: 1px;
+    float: right;
+  }
+  .btn:focus, .btn:hover {
+    box-shadow: 4px 4px 4px rgba(150, 150, 150, 0.4) !important;
+    color: #fff;
   }
   .section_h2{
     color: #626A78;
@@ -76,7 +110,7 @@ i {
   }
   .ftr_int {
     position: absolute;
-      bottom: 0;
+    bottom: 0;
   }
   .form_int {
     padding-bottom: 30px;
@@ -104,11 +138,11 @@ i {
   }
   
   .modalDialog > div {
-      width: 300px;
-      position: relative;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 4px;
+    width: 300px;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 4px;
     border: 1px solid #dadada;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
     background: none repeat scroll 0 0 #FFFFFF;
