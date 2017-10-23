@@ -17,22 +17,14 @@
   background-color: #008EF5;
 }
 .btn_resp {
-  margin: 20px;
-  font-weight: bold;
-  width: 200px;
-  height: 70px;
-  color: #fff;
-  border-radius: 1rem !important;
+  margin: 5px !important;
+  width: 195px !important;
+  font-size: .9em !important;
 }
 .li_mensagem {
   display: inline-block !important;
   font-size: .9em;
 }   
-.section_h5{
-  color: #fff;
-  font-weight: 400;
-  font-style: italic
-}
 .btn_processo {
   color: #fff;
   background-color: #008EF5;
