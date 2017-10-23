@@ -45,7 +45,7 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
         { path: 'valor20', component: Valor20Component },
         { path: 'valor40', component: Valor40Component },
         { path: 'advogado/precisa-advogado', component: PrecisaAdvogadoComponent},
-        { path: 'advogado/lista-dvogado', component: ListaAdvogadoComponent },
+        { path: 'advogado/lista-advogado', component: ListaAdvogadoComponent },
         { path: 'corpo-peticao', component: CorpoPeticaoComponent},
         { path: 'sozinho', component: SozinhoComponent},
         { path: 'quem', component: QuemComponent},
