@@ -22,21 +22,21 @@
   </h6>
   <div class="row">
     <div class="col-md-3">
-      <button class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram por um
+      <button (click)="respostas.problema = 1" class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram por um
         <br/> produto/serviço que já
         <br/> paguei</button>
     </div>
     <div class="col-md-3">
-      <button class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram uma taxa que
+      <button (click)="respostas.problema = 2" class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram uma taxa que
         <br/> não contratei</button>
     </div>
     <div class="col-md-3">
-      <button class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram por um serviço
+      <button (click)="respostas.problema = 3" class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram por um serviço
         <br/> que nunca requisitei/
         <br/>utilizei</button>
     </div>
     <div class="col-md-3">
-      <button class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram um valor maior
+      <button (click)="respostas.problema = 4" class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Cobraram um valor maior
         <br/> do que o que eu contratei</button>
     </div>
   </div>

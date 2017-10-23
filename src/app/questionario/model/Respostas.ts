@@ -38,5 +38,7 @@ export class Respostas {
   constructor() {
     this.dadosCliente = new DadosCliente();
     this.empresa = new Empresa(null, null);
+    this.valorParcial = new ValorParcial();
+    this.corpoPeticao = new CorpoPeticao();
   }
 }

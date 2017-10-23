@@ -1,5 +1,5 @@
 export class ValorParcial {
 
-  maior20: boolean = false; 
-  maior40: boolean = false;
+  maior20: Boolean = null; 
+  maior40: Boolean = null;
 }

@@ -14,15 +14,13 @@
       Cível.
     </h6>
   </div>
-  <div style="width:100%;" class="input-group">
-    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" />
-  </div>
 </div>
 
 <div class="row">
+  <input type="file" name="pic" accept="image/*" (change)="onChange($event)">
   <div class="col-md-4"></div>
   <div class="col-md-3">
-    <button class="btn btn_resp btn_darkblue" routerLink="/questionario/nome" routerLinkActive="active">Salvar PDF</button>
+    <button (click)="pdf()" class="btn btn_resp btn_darkblue" routerLinkActive="active">Salvar PDF</button>
   </div>
   <div class="col-md-4"></div>
 </div>

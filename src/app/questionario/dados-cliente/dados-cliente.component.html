@@ -15,38 +15,38 @@
         <form>
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" placeholder="Nome" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.nome" type="text" placeholder="Nome" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Sobrenome" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-6">
-              <input type="text" placeholder="RG" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="col-md-6">
-              <input type="text" placeholder="Órgão expeditor" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.sobrenome" type="text" placeholder="Sobrenome" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" placeholder="CPF" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.sobrenome" type="number" placeholder="RG" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Data de nascimento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.orgaoExpeditor" type="text" placeholder="Órgão expeditor" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" style="margin-top: 30px;" placeholder="Telefone residencial" class="form-control col-md-6 input_int_100"
+              <input [(ngModel)]="respostas.dadosCliente.cpf" type="text" placeholder="CPF" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="col-md-6">
+              <input [(ngModel)]="respostas.dadosCliente.dataNasc" type="text" placeholder="Data de nascimento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-6">
+              <input [(ngModel)]="respostas.dadosCliente.telefoneRes" type="text" style="margin-top: 30px;" placeholder="Telefone residencial" class="form-control col-md-6 input_int_100"
                 id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" style="margin-top: 30px;" placeholder="Celular" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+              <input [(ngModel)]="respostas.dadosCliente.celular" type="text" style="margin-top: 30px;" placeholder="Celular" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
                 aria-describedby="emailHelp">
             </div>
           </div>
@@ -56,38 +56,38 @@
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" placeholder="CEP" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.cep" type="text" placeholder="CEP" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Endereço" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-6">
-              <input type="text" placeholder="Número" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="col-md-6">
-              <input type="text" placeholder="Complemento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.endereco" type="text" placeholder="Endereço" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" placeholder="Bairro" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.numero" type="text" placeholder="Número" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Cidade" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input [(ngModel)]="respostas.dadosCliente.complemento" type="text" placeholder="Complemento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" style="margin-top:30px;" placeholder="E-mail" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+              <input [(ngModel)]="respostas.dadosCliente.bairro" type="text" placeholder="Bairro" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="col-md-6">
+              <input [(ngModel)]="respostas.dadosCliente.cidade" type="text" placeholder="Cidade" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-6">
+              <input [(ngModel)]="respostas.dadosCliente.email" type="text" style="margin-top:30px;" placeholder="E-mail" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
                 aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" style="margin-top:30px;" placeholder="Senha" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+              <input [(ngModel)]="respostas.dadosCliente.senha" type="password" style="margin-top:30px;" placeholder="Senha" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
                 aria-describedby="emailHelp">
             </div>
             <br>
@@ -100,8 +100,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div>
-    <button class="btn_voltar btn-link" routerLink="/questionario/quem" routerLinkActive="active">Voltar um passo</button>  
 </div>

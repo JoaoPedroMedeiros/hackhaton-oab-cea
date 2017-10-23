@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { BootstrapGridModule } from 'ng2-bootstrap-grid';
+
 import { RespostaService } from './service/resposta.service';
 import { ProblemaComponent } from './problema/problema.component';
 import { QuestionarioComponent } from './questionario.component';

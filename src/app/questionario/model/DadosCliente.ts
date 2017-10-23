@@ -5,7 +5,7 @@ export class DadosCliente {
   rg: string;
   orgaoExpeditor: string;
   cpf: string;
-  dataNasc: Date;
+  dataNasc: string;
   telefoneRes: string;
   celular: string;
   cep: string;

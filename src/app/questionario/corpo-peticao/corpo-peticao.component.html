@@ -1,22 +1,32 @@
 <div style="height: 650px">
-<div class="titulo">
-  <h2 class="section_h2 int">O que aconteceu com você, Wanner?</h2>
-  <h6 class="section_h5 int">Chegou a hora de compartilhar o motivo pelo qual você deseja abrir um processo. </h6><br>
-</div>
-<div>
-        <p class="p_mensagem"><img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Digite os dados abaixo</p>
-      </div>
+    <div class="titulo">
+        <h2 class="section_h2 int">O que aconteceu com você, Wanner?</h2>
+        <h6 class="section_h5 int">Chegou a hora de compartilhar o motivo pelo qual você deseja abrir um processo. </h6>
+        <br>
+    </div>
+    <div>
+        <p class="p_mensagem">
+            <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Digite os dados abaixo</p>
+    </div>
     <div style="width:100%;">
-        <input type="text" placeholder="Data do ocorrido" class="form-control input_int_100" name="dtOcorrido" id="eDtOcorrido"/><br>
-        <textarea placeholder="Conte-nos a sua história. Tente ser o mais detalhista possível..." class="form-control txt_area_100" name="historia" id="eHistoria" rows="8" cols="50"></textarea>  
+        <input type="text" placeholder="Data do ocorrido" class="form-control input_int_100" name="dtOcorrido" id="eDtOcorrido"
+            [(ngModel)]="respostas.corpoPeticao.data"/>
+        <br>
+        <textarea placeholder="Conte-nos a sua história. Tente ser o mais detalhista possível..." class="form-control txt_area_100"
+            name="historia" id="eHistoria" rows="8" cols="50" [(ngModel)]="respostas.corpoPeticao.historia"></textarea>
     </div>
     <div style="height: 40px"></div>
     <div>
-        <p class="p_mensagem"><img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual é o valor da <strong>indenização</strong> que você deseja receber?</p>
+        <p class="p_mensagem">
+            <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Qual é o valor da
+            <strong>indenização</strong> que você deseja receber?</p>
     </div>
     <div style="width:100%;">
-        <input type="text" placeholder="Valor da indenização" class="form-control input_int_100" name="vlIdenizacao" id="eVlIdenizacao"/>
-        <input type="checkbox" style="text-align:left !important; margin-top:10px; margin-bottom:10px;" name="chkConfirmar" id="cConfirmar"/>  Afirmo que todas as informações declaradas são verdadeiras estando de acordo com Termos e Condições.<br>
+        <input type="text" placeholder="Valor da indenização" class="form-control input_int_100" name="vlIdenizacao" id="eVlIdenizacao"
+        [(ngModel)]="respostas.valor"/>
+        <input type="checkbox" style="text-align:left !important; margin-top:10px; margin-bottom:10px;" name="chkConfirmar" id="cConfirmar"
+        /> Afirmo que todas as informações declaradas são verdadeiras estando de acordo com Termos e Condições.
+        <br>
         <button class="btn btn_proximo" id="btn_prox" routerLink="/questionario/quem" routerLinkActive="active">Próximo passo</button>
     </div>
     <footer style="margin-top: 70px;">

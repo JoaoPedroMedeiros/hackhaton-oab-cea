@@ -9,7 +9,7 @@
       <p class="p_mensagem"><img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Mas, antes disso, qual é o seu nome?</p>
     </div>
     <div style="width:100%;" class="input-group">
-      <input type="text" placeholder="Digite seu nome..." class="form-control input_int" name="nome" id="eNome"/>
+      <input type="text" placeholder="Digite seu nome..." class="form-control input_int" [(ngModel)]="respostas.dadosCliente.nome" name="nome" id="eNome"/>
       <button type="button" class="btn btn_processo" id="btn_prox" routerLink="/questionario/valor20" routerLinkActive="active">OK</button>
     </div>
     <div class="input-group-btn">
