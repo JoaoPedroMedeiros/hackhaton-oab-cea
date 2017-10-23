@@ -18,13 +18,13 @@ i {
     padding-right: 30px;
 }
 .input_int {
-    width: 80% !important;
-    background-color: #EEEEF6 !important;
-    border-color: #EEEEF6 !important;
-    border-radius: 7px !important;
-    height: 50px !important;
-    margin-top: 10px;
-  }
+  width: 80% !important;
+  background-color: #EEEEF6 !important;
+  border-color: #EEEEF6 !important;
+  border-radius: 7px !important;
+  height: 50px !important;
+  margin-top: 10px;
+}
 
 .linha_grid {
   background-color: #EEEEF6; 
@@ -33,13 +33,18 @@ i {
   margin-top: 10px; 
   padding: 10px;
 }
-  .input_int_100 {
-    background-color: #EEEEF6 !important;
-    border-color: #EEEEF6 !important;
-    border-radius: 7px !important;
-    margin-top: 10px;
-    height: 50px !important
-  }
+.input_int_100 {
+  background-color: #EEEEF6 !important;
+  border-color: #EEEEF6 !important;
+  border-radius: 7px !important;
+  margin-top: 10px;
+  height: 50px !important
+}
+.scroll_pane {
+  height:300px;
+  overflow-y:scroll;
+  width:100%;
+}
   .txt_area_100 {
     background-color: #EEEEF6 !important;
     border-color: #EEEEF6 !important;

@@ -18,6 +18,26 @@ export class ModalProcurarCnpjComponent extends DialogComponent<any, Empresa> {
     this.empresas.push(new Empresa('0000001', 'TIM1'));
     this.empresas.push(new Empresa('0000002', 'TIM2'));
     this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
+    this.empresas.push(new Empresa('0000003', 'TIM3'));
   }
 
   retornar(empresa: Empresa) {

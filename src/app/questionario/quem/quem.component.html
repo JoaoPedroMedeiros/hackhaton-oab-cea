@@ -16,7 +16,7 @@
       <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/> 
     </div><br>
     <div>
-      <p class="p_mensagem"><b>Empresa a processar:</b> {{empresa.razaosocial}}</p>
+      <p class="p_mensagem"><b>Empresa a processar:</b> {{empresa.razaosocial == null ? 'Nenhuma empresa selecionada' : empresa.razaosocial}}</p>
       <button class="btn btn_help btn_darkblue" (click)="abrirModalBuscarEmpresa()">Buscar empresas cadastradas</button>
     </div>
     <div style="width:100%; text-align: right" class="input-group">
@@ -25,5 +25,5 @@
   </div>
 </div>
 <footer class="ftr_int">
-  <button class="btn-link" routerLink="/questionario/sozinho" routerLinkActive="active"><p class="voltar">Voltar um passo</p></button>
+  <button class="btn-link" routerLink="/questionario/corpo-peticao" routerLinkActive="active"><p class="voltar">Voltar um passo</p></button>
 </footer>
