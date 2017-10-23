@@ -60,6 +60,10 @@ i {
     font-size: 1.2em;
     margin-top: 10px;
   }
+  .tabela {
+    background-color: #EEEEF6 !important;
+    font-size: .8em;
+  }
   .section_h2{
     color: #626A78;
     font-weight: 600;
