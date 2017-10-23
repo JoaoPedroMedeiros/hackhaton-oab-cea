@@ -78,6 +78,17 @@ i {
     font-size: 1.2em;
     margin-top: 10px;
   }
+  .btn_proximo {
+    color: #fff;
+    background-color: #008EF5;
+    border-radius: 7px !important;
+    width: 150px;
+    margin-left: 3px;
+    font-weight: bolder !important;
+    height: 50px;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
   .tabela {
     background-color: #EEEEF6 !important;
     font-size: .8em;
