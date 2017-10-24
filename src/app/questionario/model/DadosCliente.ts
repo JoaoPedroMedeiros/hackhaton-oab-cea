@@ -1,6 +1,6 @@
 export class DadosCliente {
 
-  nome: string;
+  nome: string = 'Amigo(a)';
   sobrenome: string;
   rg: string;
   orgaoExpeditor: string;

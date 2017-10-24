@@ -6,6 +6,7 @@ import { Empresa } from '../model/Empresa';
 import { Http } from '@angular/http';
 import { DialogService } from 'ng2-bootstrap-modal';
 import { ModalProcurarCnpjComponent } from './modal-procurar-cnpj/modal-procurar-cnpj.component';
+import { Respostas } from '../model/Respostas';
 
 @Component({
   selector: 'app-quem',
@@ -16,10 +17,14 @@ export class QuemComponent extends PerguntaComponent {
 
   empresa: Empresa;
 
+  respostas: Respostas;
+
   constructor(protected respostaService: RespostaService, private dialogService: DialogService, private http: Http) {
     super(respostaService);
 
     this.empresa = respostaService.getRespostas().empresa;
+
+    this.respostas = respostaService.getRespostas();
   }
 
   abrirModalBuscarEmpresa() {
