@@ -1,3 +1,163 @@
-<p>
-  peticao works!
-</p>
+<div style="text-align: right; width: 100%;">
+  <button (click)="pdf()" class="btn btn_resp btn_darkblue">Salvar PDF</button>
+</div>
+
+
+<section id="divPeticao" style="padding: 15px; background-color: #fff">
+  <div>
+    <h1>Petição inicial</h1>
+
+    <div style="height: 20px"></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Dados do reclamante</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div class="row">
+          <h6 class="col-md-5">Nome:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.nome}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Data nasc:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.dataNasc}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Endereço:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.endereco}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Bairro:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.bairro}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Cidade:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.cidade}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">CEP:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.cep}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">RG:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.rg}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Org. Exp.:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.orgaoExpeditor}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">CPF:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.cpf}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">E-mail:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.email}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Fone residencial:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.telefoneRes}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Celular:</h6>
+          <h6 class="col-md-7">{{respostas.dadosCliente.celular}}</h6>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h4>Dados do reclamado</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div class="row">
+          <h6 class="col-md-5">Nome:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.razaosocial}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Endereço:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.endereco}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Bairro:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.bairro}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Cidade:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.cidade}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">CEP:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.cep}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">CNPJ:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.cnpj}}</h6>
+        </div>
+        <div class="row">
+          <h6 class="col-md-5">Telefone:</h6>
+          <h6 class="col-md-7">{{respostas.empresa.telefone}}</h6>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Assunto da reclamação</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div>
+          <p>{{problema}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Narrativa resumida</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div>
+          <p>{{respostas.corpoPeticao.historia}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Fundamentos do pedido</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div>
+          <p>ttttttttttttttttttt</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Valor do pedido</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div>
+          <p>{{ respostas.valor }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h4>A parte reclamante apresenta documentos nessa oportunidade</h4>
+        <hr align="center" width="100%" size="1" color="black">
+        <div>
+          <li>Prova 1</li>
+          <li>Prova 2</li>
+          <li>Prova 3</li>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+  </div>
+</section>
