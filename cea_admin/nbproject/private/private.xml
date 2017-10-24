@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/_Original.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/Resources.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/Prefs.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/users/profile.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/auth/login.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/Auth.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/Database.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/_templates/control_sidebar.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/public/home.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/_templates/header.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/users/index.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/Users.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/users/create.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/dashboard/index.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/_templates/footer.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/Files.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/users/edit.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/controllers/admin/Dashboard.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/_templates/main_sidebar.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/models/Ion_auth_model.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/application/views/admin/_templates/main_header.php</file>
+            <file>file:/C:/xampp/htdocs/CI-AdminLTE-master/assets/frameworks/adminlte/css/adminlte.min.css</file>
+        </group>
+    </open-files>
+</project-private>
