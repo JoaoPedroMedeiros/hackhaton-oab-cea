@@ -52,6 +52,9 @@ i {
     border-radius: 7px !important;
     margin-bottom: 20px;
   }
+  .btn.focus, .btn:focus, .btn:hover {
+    color: rgb(235, 247, 241) !important;
+  }
   .btn_choose {
     margin-left: 18%;
     margin-right: 18%;
