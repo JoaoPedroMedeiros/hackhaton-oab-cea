@@ -54,5 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/dashboard';
+$route['cnpjrest/(:any)'] = 'cnpjrest/$1';
 $route['admin/prefs/interfaces/(:any)'] = 'admin/prefs/interfaces/$1';
-

@@ -216,3 +216,121 @@ i {
     margin-left: 19%;
   }
   /* Fim modal */
+
+  /*Horizontal timeline*/
+  @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    font-family: lato;
+  }
+  .section-header, .steps-header, .steps-name {
+    color: rgba(0,0,0,.3);
+    font-weight: 400;
+    font-size: 1em;
+  }
+  .fim {
+    padding-left: 7px;
+  }
+  .steps-name-ative {
+    color: #3498db;
+    font-weight: 400;
+    font-size: 1em;
+    margin-top: 0;
+  }
+  .steps-timeline {
+    outline: 1px dashed rgba(255, 0, 0, 0);
+    width:98%;
+  }
+  @media screen and (max-width: 500px) {
+    .steps-timeline {
+      border-left: 2px solid rgba(0,0,0,.3);
+      margin-left: 25px;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    .steps-timeline {
+      border-top: 2px solid rgba(0,0,0,.3);
+    }
+  }
+  .steps-timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .steps-one, .steps-two, .steps-three {
+    outline: 1px dashed rgba(0, 128, 0, 0);
+  }
+  @media screen and (max-width: 500px) {
+    .steps-one, .steps-two, .steps-three {
+      margin-left: -25px;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    .steps-one, .steps-two, .steps-three {
+      float: left;
+      width: 33%;
+      margin-top: -50px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .steps-one, .steps-two {
+      padding-bottom: 40px;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    .steps-one {
+      margin-left: -16.65%;
+      margin-right: 16.65%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .steps-three {
+      margin-bottom: -100%;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    .steps-three {
+      margin-left: 16.65%;
+      margin-right: -16.65%;
+    }
+  }
+  .steps-img {
+    display: block;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  @media screen and (max-width: 500px) {
+    .steps-img {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+  .steps-name, .steps-description {
+    margin: 0;
+  }
+  @media screen and (min-width: 500px) {
+    .steps-name {
+      text-align: center;
+    }
+  }
+  .steps {
+    display: inline-block;
+    margin-top: -10px;
+    margin-right: 23px;
+  }
+  .steps-description {
+    overflow: hidden;
+  }
+  @media screen and (min-width: 500px) {
+    .steps-description {
+      text-align: center;
+    }
+  }
+  
