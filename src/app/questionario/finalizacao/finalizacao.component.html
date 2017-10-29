@@ -1,7 +1,74 @@
+<div class="steps-timeline">
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 1
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 2
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 3
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 4
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 5
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 6
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 7
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 8
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/verde.png" alt="" />
+    <h3 class="steps-name-ative">
+      Passo 9
+    </h3>
+  </div>
+  <div class="steps fim">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Fim
+    </h3>
+  </div>
+</div>
+<!-- /.steps-timeline -->
 <div class="titulo">
-  <h2 class="section_h2 int">Prontinho, {{respostas.dadosCliente.nome}}!</h2>
+  <h2 class="section_h2 int">Prontinho, {{respostas?.dadosCliente.nome}}!</h2>
   <h6 class="section_h5 int">Você já compartilhou conosco todas as informações necessárias para a criação do seu processo. Agora, a sua tarefa é imprimir,
-    reunir todos os documentos necessários e protocolar a sua petição inicial no Juizado Especial. </h6>
+    reunir todos os documentos necessários e protocolar o seu requerimento inicial no Juizado Especial. </h6>
 </div>
 
 <div style="height: 80px"></div>
@@ -9,8 +76,8 @@
 <div>
   <div>
     <p class="p_mensagem">
-      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Imprima sua petição</p>
-    <h6 class="h6_cinza">Imprima duas vias da sua petição. Uma ficará com você e a outra deve ser encaminhada para o protocolo do Juizado Especial
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Imprima seu requerimento</p>
+    <h6 class="h6_cinza">Imprima duas vias do seu requerimento. Uma ficará com você e a outra deve ser encaminhada para o protocolo do Juizado Especial
       Cível.
     </h6>
   </div>
@@ -19,7 +86,7 @@
 <div class="row">
   <div class="col-md-4"></div>
   <div class="col-md-3">
-    <button class="btn btn_resp btn_darkblue" routerLink="/questionario/peticao" routerLinkActive="active">Ver petição</button>
+    <button class="btn btn_resp btn_darkblue" (click)="salvarPeticao()" [disabled]="gerando">Baixar requerimento</button>
   </div>
   <div class="col-md-4"></div>
 </div>
@@ -30,8 +97,8 @@
   <div>
     <p class="p_mensagem">
       <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Reúna seus documentos</p>
-    <h6 class="h6_cinza">Faça uma cópia do seu CPF e comprovante de residência atualizado (dos últimos 90 dias). No momento de protocolar a sua
-      petição, você deve levar essas cópias,
+    <h6 class="h6_cinza">Faça uma cópia do seu CPF e comprovante de residência atualizado (dos últimos 90 dias). No momento de protocolar o seu
+      requerimento, você deve levar essas cópias,
       <b>bem como os documentos originais.</b>
     </h6>
   </div>
@@ -42,7 +109,7 @@
 <div>
   <div>
     <p class="p_mensagem">
-      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Protocole sua petição</p>
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Protocole seu requerimento</p>
     <h6 class="h6_cinza">Digira-se ao Juizado Especial mais próximo da sua casa e entregue as duas vias impressas do protocolo. Além disso, leve
       também as cópias e os originais do seu CPF e comprovante de residência atualizado.
     </h6>
@@ -52,13 +119,19 @@
 <div style="height: 40px"></div>
 
 <div>
-  <p style="font-size: 12px"><b>Juizado especial - Av. Pres. Getúlio Vargas, 2826 - Rebouças, Curitiba</b></p>
-  <p style="font-size: 12px"><b>Telefone: (41) 3312-6000</b></p>
-  <p style="font-size: 12px"><b>Horário de atendimento: Segunda a Sexta das 12h00 as 18h00</b></p>
+  <p style="font-size: 12px">
+    <b>Juizado especial - Av. Pres. Getúlio Vargas, 2826 - Rebouças, Curitiba</b>
+  </p>
+  <p style="font-size: 12px">
+    <b>Telefone: (41) 3312-6000</b>
+  </p>
+  <p style="font-size: 12px">
+    <b>Horário de atendimento: Segunda a Sexta das 12h00 as 18h00</b>
+  </p>
 </div>
 
 <div style="height: 40px"></div>
 
-<div>
-    <button class="btn_voltar btn-link" routerLink="/questionario/provas" routerLinkActive="active">Voltar um passo</button>  
-</div>
+<footer class="btn-voltar" routerLink="/questionario/provas" routerLinkActive="active">
+  <img src="assets/img/btn-voltar.png" /><a>Voltar um passo</a>
+</footer>

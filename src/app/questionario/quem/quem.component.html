@@ -1,5 +1,72 @@
+<div class="steps-timeline">
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 1
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 2
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 3
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 4
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 5
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/verde.png" alt="" />
+    <h3 class="steps-name-ative">
+      Passo 6
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 7
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 8
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 9
+    </h3>
+  </div>
+  <div class="steps fim">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Fim
+    </h3>
+  </div>
+</div>
+<!-- /.steps-timeline -->
 <div class="titulo">
-  <h2 class="section_h2 int">Ok, {{respostas.dadosCliente.nome}}. Vamos dar sequência a sua petição.</h2>
+  <h2 class="section_h2 int">Ok, {{respostas.dadosCliente.nome}}. Vamos dar sequência ao seu requerimento.</h2>
   <h6 class="section_h5 int">Essa é a hora de saber mais sobre a empresa que será processada. Você nos ajuda compartilhando informações sobre ela?
   </h6>
   <br>
@@ -17,7 +84,8 @@
       problemas.
     </h6>
     <div style="width:100%;" class="input-group">
-      <input type="text" [textMask]="{mask: cnpj}" (ngModelChange)="changeCnpj($event)" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/>
+      <input [textMask]="{mask:cnpj}" (ngModelChange)="changeCnpj($event)" type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"
+      />
     </div>
     <br>
     <div>
@@ -29,8 +97,9 @@
       <button type="button" style="width: 200px" class="btn btn_processo" id="btn_prox" routerLink="/questionario/dados-cliente"
         routerLinkActive="active">Próximo passo</button>
     </div>
-    <footer class="ftr_int">
-      <button class="btn-link" routerLink="/questionario/corpo-peticao" routerLinkActive="active"><p class="voltar">Voltar um passo</p></button>
+
+    <footer class="btn-voltar" routerLink="/questionario/corpo-peticao" routerLinkActive="active">
+      <img src="assets/img/btn-voltar.png" /><a>Voltar um passo</a>
     </footer>
   </div>
 </div>

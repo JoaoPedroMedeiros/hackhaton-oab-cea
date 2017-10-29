@@ -1,3 +1,70 @@
+<div class="steps-timeline">
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 1
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 2
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 3
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 4
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 5
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 6
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 7
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/verde.png" alt="" />
+    <h3 class="steps-name-ative">
+      Passo 8
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 9
+    </h3>
+  </div>
+  <div class="steps fim">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Fim
+    </h3>
+  </div>
+</div>
+<!-- /.steps-timeline -->
 <div class="titulo">
   <h2 class="section_h2 int">Junte suas provas.</h2>
   <h6 class="section_h5 int">Sabe todos aqueles documentos que demonstram que você foi lesado pela empresa? Chegou a hora de separá-los para usar como
@@ -18,10 +85,7 @@
       da sua cidade.
     </h6>
   </div>
-  <div style="width:100%;" class="input-group">
-    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" />
-    <!-- <input type="file" name="pic" accept="image/*"> -->
-  </div>
+  <input (change)="comprovanteSerasa($event)" class="form-control input_prova" type="file" name="pic" accept="image/*">
 </div>
 
 <div style="height: 80px"></div>
@@ -35,10 +99,7 @@
       como o seu endereço e CNPJ.
     </h6>
   </div>
-  <div style="width:100%;" class="input-group">
-    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" 
-    />
-  </div>
+  <input (change)="comprovantePagamento($event)" class="form-control input_prova" type="file" name="pic" accept="image/*">
 </div>
 
 <div style="height: 80px"></div>
@@ -51,11 +112,8 @@
     <h6 class="h6_cinza">Se possível, compartilhe o contrato ou a fatura que a empresa forneceu no momento em que você adotou o serviço/ produto.
     </h6>
   </div>
-  <div style="width:100%;" class="input-group">
-    <input type="text" placeholder="Arquivo..." class="form-control input_int_100" name="nome" id="eNome" 
-    />
-    <input type="text" placeholder="Número do contrato ou fatura" class="form-control input_int_100" name="nome" id="eNome" />
-  </div>
+
+  <input (change)="contratoFatura($event)" class="form-control input_prova" type="file" name="pic" accept="image/*">
 </div>
 
 <div style="height: 80px"></div>
@@ -64,15 +122,14 @@
 <div>
   <div>
     <p class="p_mensagem">
-      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Outras provas</p>
+      <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Outra prova</p>
     <h6 class="h6_cinza">Você tem alguma outra prova que pode te ajudar nessa ação, como por exemplo um protocolo de atendimento do SAC? Então
       compartilhe aqui.
 
     </h6>
   </div>
   <div style="width:100%;" class="input-group">
-    <input type="text" style="width: 100%" placeholder="Arquivo..." class="form-control input_int" name="nome" id="eNome"/>
-    <button type="button" style="font-weight: bold; width: 50px"  class="btn btn_processo" id="btn_prox" routerLink="/questionario/valor20" routerLinkActive="active">+</button>
+    <input (change)="outraProva($event)" class="form-control input_prova" type="file" name="pic" accept="image/*">
   </div>
 </div>
 
@@ -85,6 +142,6 @@
 
 <div style="height: 80px"></div>
 
-<div>
-    <button class="btn_voltar btn-link" routerLink="/questionario/dados-cliente" routerLinkActive="active">Voltar um passo</button>  
-</div>
+<footer class="btn-voltar" routerLink="/questionario/dados-cliente" routerLinkActive="active">
+  <img src="assets/img/btn-voltar.png" /><a>Voltar um passo</a>
+</footer>

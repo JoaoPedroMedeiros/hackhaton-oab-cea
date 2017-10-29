@@ -1,8 +1,76 @@
+<div class="steps-timeline">
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 1
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 2
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 3
+    </h3>
+  </div>
+
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 4
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 5
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 6
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/verde.png" alt="" />
+    <h3 class="steps-name-ative">
+      Passo 7
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 8
+    </h3>
+  </div>
+  <div class="steps">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Passo 9
+    </h3>
+  </div>
+  <div class="steps fim">
+    <img class="steps-img" src="assets/img/cinza.png" alt="" />
+    <h3 class="steps-name">
+      Fim
+    </h3>
+  </div>
+</div>
+<!-- /.steps-timeline -->
+
 <div style="height: 750px;">
   <div class="titulo">
     <h2 class="section_h2 int">Precisamos saber mais sobre você, {{respostas.dadosCliente.nome}}</h2>
     <h6 class="section_h5 int">Agora é a hora de nós sabermos mais sobre você! Compartilhe todos os seus dados corretamente, para que nós possamos dar
-      continuidade a sua petição inicial.</h6>
+      continuidade ao seu requerimento inicial.</h6>
     <br>
   </div>
   <div style="height: 40px">
@@ -15,39 +83,42 @@
         <form>
           <div class="form-group">
             <div class="col-md-6">
-              <input  type="text" placeholder="Nome" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="nome" [(ngModel)]="respostas.dadosCliente.nome" type="text" placeholder="Nome" class="form-control col-md-6 input_int" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+              {{respostas.dadosCliente.nome}}
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Sobrenome" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-6">
-              <input type="text" placeholder="RG" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="col-md-6">
-              <input type="text" placeholder="Órgão expeditor" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="sobrenome" [(ngModel)]="respostas.dadosCliente.sobrenome" type="text" placeholder="Sobrenome" class="form-control col-md-6 input_int" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input [textMask]="{mask: cpf}" type="text" placeholder="CPF" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="rg" [(ngModel)]="respostas.dadosCliente.rg" type="text" placeholder="RG" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input [textMask]="{mask: data}" type="text" placeholder="Data de nascimento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="orgaoExpeditor" [(ngModel)]="respostas.dadosCliente.orgaoExpeditor" type="text" placeholder="Órgão expeditor" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input [textMask]="{mask: foneRes}" type="text" style="margin-top: 30px;" placeholder="Telefone residencial" class="form-control col-md-6 input_int_100"
+              <input name="cpf" [(ngModel)]="respostas.dadosCliente.cpf"  [textMask]="{mask: cpf}" type="text" placeholder="CPF" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            </div>
+            <div class="col-md-6">
+              <input name="data" [(ngModel)]="respostas.dadosCliente.dataNasc" [textMask]="{mask: data}" type="text" placeholder="Data de nascimento" class="form-control col-md-6 input_int_100"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-6">
+              <input name="telefoneRes" [(ngModel)]="respostas.dadosCliente.telefoneRes" [textMask]="{mask: foneRes}" type="text" style="margin-top: 30px;" placeholder="Telefone residencial" class="form-control col-md-6 input_int_100"
                 id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input [textMask]="{mask: cel}" type="text" style="margin-top: 30px;" placeholder="Celular" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
-                aria-describedby="emailHelp">
+              <input name="celular" [(ngModel)]="respostas.dadosCliente.celular" [textMask]="{mask: cel}" type="text" style="margin-top: 30px;" placeholder="Celular" class="form-control col-md-6 input_int_100"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
@@ -56,10 +127,11 @@
 
           <div class="form-group">
             <div class="col-md-6">
-              <input [textMask]="{mask: cep}" type="text" placeholder="CEP" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="cep" [(ngModel)]="respostas.dadosCliente.cep" [textMask]="{mask: cep}" type="text" placeholder="CEP" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <select class="form-control col-md-6 input_int_100">
+              <select name="uf" [(ngModel)]="respostas.dadosCliente.uf" class="form-control col-md-6 input_int_100">
                 <option *ngFor="let estado of estados">
                   {{estado.sigla}}
                 </option>
@@ -69,35 +141,35 @@
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" placeholder="Cidade" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="cidade" [(ngModel)]="respostas.dadosCliente.cidade" type="text" placeholder="Cidade" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Endereço" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="endereco" [(ngModel)]="respostas.dadosCliente.endereco" type="text" placeholder="Endereço" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" placeholder="Número" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="numero" [(ngModel)]="respostas.dadosCliente.numero" type="text" placeholder="Número" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="text" placeholder="Bairro" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="bairro" [(ngModel)]="respostas.dadosCliente.bairro" type="text" placeholder="Bairro" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-12">
-              <input type="text" placeholder="Complemento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="complemento" [(ngModel)]="respostas.dadosCliente.complemento" type="text" placeholder="Complemento" class="form-control col-md-6 input_int_100" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-6">
-              <input type="text" style="margin-top:30px;" placeholder="E-mail" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+              <input name="complemento" [(ngModel)]="respostas.dadosCliente.email" type="text" style="margin-top:30px;" placeholder="E-mail" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
                 aria-describedby="emailHelp">
             </div>
             <div class="col-md-6">
-              <input type="password" style="margin-top:30px;" placeholder="Senha" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
+              <input name="complemento" [(ngModel)]="respostas.dadosCliente.senha" type="password" style="margin-top:30px;" placeholder="Senha" class="form-control col-md-6 input_int_100" id="exampleInputEmail1"
                 aria-describedby="emailHelp">
             </div>
             <br>
@@ -105,6 +177,9 @@
           </div>
           <div style="width:98.5%; text-align: right;" class="input-group">
             <button style="margin-top: 20px; width: 150px;" class="btn_processo" routerLink="/questionario/provas" routerLinkActive="active">Próximo passo</button>
+            <div class="btn-voltar" routerLink="/questionario/corpo-peticao" routerLinkActive="active">
+              <img src="assets/img/btn-voltar.png" /><a>Voltar um passo</a>
+            </div>
           </div>
         </form>
       </div>
