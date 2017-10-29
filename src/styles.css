@@ -66,6 +66,14 @@ i {
   height: 50px !important;
   margin-top: 10px;
 }
+.input_bts {
+  margin-top: 10px;
+  background-color: #EEEEF6 !important;
+  border-color: #EEEEF6 !important;
+  border-radius: 7px !important;
+  height: 50px !important;
+}
+
 .linha_grid {
   background-color: #EEEEF6; 
   border-color: #EEEEF6 !important; 
