@@ -2,10 +2,17 @@
   <button (click)="pdf()" class="btn btn_resp btn_darkblue">Salvar PDF</button>
 </div>
 
+<input type="file" name="pic" accept="image/*" (change)="fileEvent1($event)">
+<input type="file" name="pic" accept="image/*" (change)="fileEvent2($event)">
+<input type="file" name="pic" accept="image/*" (change)="fileEvent3($event)">
+<input type="file" name="pic" accept="image/*" (change)="fileEvent4($event)">
+
 
 <section id="divPeticao" style="padding: 15px; background-color: #fff">
   <div>
     <h1>Petição inicial</h1>
+
+   
 
     <div style="height: 20px"></div>
 

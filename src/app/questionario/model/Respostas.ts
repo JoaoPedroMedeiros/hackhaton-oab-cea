@@ -33,6 +33,11 @@ export class Respostas {
    */
   public valor: number;
 
+  /**
+   * Provas anexadas
+   */
+  public provas: any[] = [];
+
   public empresa: Empresa;
 
   constructor() {
@@ -40,5 +45,17 @@ export class Respostas {
     this.empresa = new Empresa(null, null);
     this.valorParcial = new ValorParcial();
     this.corpoPeticao = new CorpoPeticao();
+  }
+
+  problemaString(): string {
+    if (this.problema == 1 || this.problema == null)
+      return 'Cobraram o que já foi pago';
+    else if (this.problema == 2)
+      return 'Cobraram uma taxa que não contratei';
+    else if (this.problema == 3)
+      return 'Cobraram por um serviço que nunca requisitei/utilizei';
+    else if (this.problema == 4)
+      return 'Cobraram um valor maior do que eu contratei';
+    return null;
   }
 }

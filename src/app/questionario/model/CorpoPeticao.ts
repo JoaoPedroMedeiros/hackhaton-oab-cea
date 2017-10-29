@@ -1,5 +1,5 @@
 export class CorpoPeticao {
 
   data: string;
-  historia: String;
+  historia: string;
 }
