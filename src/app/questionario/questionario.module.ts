@@ -27,6 +27,7 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
 import { TextMaskModule } from 'angular2-text-mask';
 import { CurrencyMaskModule } from "ng2-currency-mask";
 import { CurrencyMaskConfig, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask/src/currency-mask.config';
+import { ModalTermosComponent } from './corpo-peticao/modal-termos/modal-termos.component';
 
 export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
   align: "left",
@@ -92,9 +93,11 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
     PrecisaAdvogadoComponent,
     ListaAdvogadoComponent,
     InfoAdvogadoComponent,
+    ModalTermosComponent
   ],
   entryComponents: [
     ModalProcurarCnpjComponent,
+    ModalTermosComponent,
     InfoAdvogadoComponent
   ],
   exports: [

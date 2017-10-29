@@ -4,6 +4,7 @@ import { RespostaService } from '../service/resposta.service';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import * as jsPDF from 'jspdf';
 import { Exporter } from '../../../pdf-exporter/Exporter';
+import { Respostas } from '../model/Respostas';
 
 @Component({
   selector: 'app-finalizacao',
@@ -14,8 +15,12 @@ export class FinalizacaoComponent extends PerguntaComponent {
 
   gerando: boolean = false;
 
+  respostas: Respostas;
+
   constructor(protected respostaService: RespostaService) {
     super(respostaService);
+
+    this.respostas = respostaService.getRespostas();
   }
 
   salvarPeticao() {
@@ -75,8 +80,8 @@ export class FinalizacaoComponent extends PerguntaComponent {
 
     if (this.respostaService.getRespostas().empresa.razaosocial)
       pdf.addHeaderItemValue2(1, this.respostaService.getRespostas().empresa.razaosocial);
-    if (this.respostaService.getRespostas().empresa.complemento)
-      pdf.addHeaderItemValue2(2, this.respostaService.getRespostas().empresa.complemento);
+    if (this.respostaService.getRespostas().empresa.logradouro)
+      pdf.addHeaderItemValue2(2, this.respostaService.getRespostas().empresa.logradouro);
     if (this.respostaService.getRespostas().empresa.bairro)
       pdf.addHeaderItemValue2(3, this.respostaService.getRespostas().empresa.bairro);
     if (this.respostaService.getRespostas().empresa.municipio)
@@ -92,9 +97,8 @@ export class FinalizacaoComponent extends PerguntaComponent {
     pdf.addContentSection1(this.respostaService.getRespostas().problemaString());
 
     pdf.addSubtitleSection2("Valor do pedido");
-    
     if (this.respostaService.getRespostas().valor != null)
-      pdf.addContentSection2(this.respostaService.getRespostas().valor.toString());
+      pdf.addContentSection2('R$ ' + this.respostaService.getRespostas().valor.toString());
 
     pdf.addSubtitleSection3("Narrativa resumida");
     

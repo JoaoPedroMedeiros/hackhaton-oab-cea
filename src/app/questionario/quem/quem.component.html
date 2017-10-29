@@ -57,12 +57,12 @@
       Passo 9
     </h3>
   </div>
-  <div class="steps fim">
+  <!-- <div class="steps fim">
     <img class="steps-img" src="assets/img/cinza.png" alt="" />
     <h3 class="steps-name">
       Fim
     </h3>
-  </div>
+  </div> -->
 </div>
 <!-- /.steps-timeline -->
 <div class="titulo">
@@ -84,8 +84,8 @@
       problemas.
     </h6>
     <div style="width:100%;" class="input-group">
-      <input [textMask]="{mask:cnpj}" (ngModelChange)="changeCnpj($event)" type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"
-      />
+      <input [textMask]="{mask:cnpj}" (ngModelChange)="changeCnpj($event)" type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100"
+        name="nome" id="eNome" [(ngModel)]="empresa.cnpj" />
     </div>
     <br>
     <div>
@@ -99,7 +99,8 @@
     </div>
 
     <footer class="btn-voltar" routerLink="/questionario/corpo-peticao" routerLinkActive="active">
-      <img src="assets/img/btn-voltar.png" /><a>Voltar um passo</a>
+      <img src="assets/img/btn-voltar.png" />
+      <a>Voltar um passo</a>
     </footer>
   </div>
 </div>

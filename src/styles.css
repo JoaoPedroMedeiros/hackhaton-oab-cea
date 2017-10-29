@@ -67,10 +67,11 @@ i {
   margin-top: 10px;
 }
 .input_bts {
-  margin-top: 10px;
+  width: 50%;
+  margin-bottom: 10px;
   background-color: #EEEEF6 !important;
   border-color: #EEEEF6 !important;
-  border-radius: 7px !important;
+  border-radius: 7px;
   height: 50px !important;
 }
 
@@ -401,8 +402,8 @@ i {
   .steps {
     display: inline-block;
     margin-top: -10px;
-    margin-right: 18px;
-    margin-left: 18px;
+    margin-right: 23px;
+    margin-left: 23px;
   }
   .input_prova {
     width: 100% !important;
