@@ -54,10 +54,35 @@ export class QuemComponent extends PerguntaComponent {
   }
 
   changeCnpj(cnpj: string) {
-    console.log(cnpj);
+    cnpj = cnpj.replace('.', '').replace('.', '');
+    cnpj = cnpj.replace('/', '');
+    cnpj = cnpj.replace('-', '');
     if (this.validarCNPJ(cnpj)) {
-      this.http.get('http://consumidoremacao.com.br/cea_admin/cnpjrest?cnpj=' + cnpj, { headers: this.getHeaders()}).subscribe((empresa) => {
-        console.log(empresa);
+      this.http.get('http://consumidoremacao.com.br/cea_admin/cnpjrest?cnpj=' + cnpj).subscribe((empresa) => {
+        // console.log(empresa.json());
+        // console.log(empresa.json().cnpj);
+        // console.log(empresa.json().nome);
+        // console.log(empresa.json().email);
+        // console.log(empresa.json().telefone);
+        // console.log(empresa.json().cep);
+        // console.log(empresa.json().uf);
+        // console.log(empresa.json().municipio);
+        // console.log(empresa.json().logradouro);
+        // console.log(empresa.json().bairro);
+        // console.log(empresa.json().numero);
+        // console.log(empresa.json().complemento);
+        
+        this.respostaService.getRespostas().empresa.cnpj = empresa.json().cnpj;
+        this.respostaService.getRespostas().empresa.razaosocial = empresa.json().nome;
+        this.respostaService.getRespostas().empresa.email = empresa.json().email;
+        this.respostaService.getRespostas().empresa.telefone = empresa.json().telefone;
+        this.respostaService.getRespostas().empresa.cep = empresa.json().cep;
+        this.respostaService.getRespostas().empresa.uf = empresa.json().uf;
+        this.respostaService.getRespostas().empresa.municipio = empresa.json().municipio;
+        this.respostaService.getRespostas().empresa.logradouro = empresa.json().logradouro;
+        this.respostaService.getRespostas().empresa.bairro = empresa.json().bairro;
+        this.respostaService.getRespostas().empresa.numero = empresa.json().numero;
+        this.respostaService.getRespostas().empresa.complemento = empresa.json().complemento;
       });
     }
   }
@@ -66,7 +91,7 @@ export class QuemComponent extends PerguntaComponent {
     const headers = new Headers();
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json');
-    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Access-Control-Allow-Origin', 'http://localhost:4200/');
     return headers;
   }
 

@@ -1,16 +1,23 @@
 <div style="text-align: right; width: 100%;">
   <button (click)="pdf()" class="btn btn_resp btn_darkblue">Salvar PDF</button>
 </div>
-
-<input type="file" name="pic" accept="image/*" (change)="fileEvent1($event)">
-<input type="file" name="pic" accept="image/*" (change)="fileEvent2($event)">
-<input type="file" name="pic" accept="image/*" (change)="fileEvent3($event)">
-<input type="file" name="pic" accept="image/*" (change)="fileEvent4($event)">
-
+<br>
+<label class="btn btn-info form-control">
+  <input type="file" name="pic" accept="image/*" (change)="fileEvent1($event)">
+</label>
+<label class="btn btn-info form-control">
+  <input type="file" name="pic" accept="image/*" (change)="fileEvent2($event)">
+</label>
+<label class="btn btn-info form-control">
+  <input type="file" name="pic" accept="image/*" (change)="fileEvent3($event)">
+</label>
+<label class="btn btn-info form-control">
+  <input type="file" name="pic" accept="image/*" (change)="fileEvent4($event)">
+</label>
 
 <section id="divPeticao" style="padding: 15px; background-color: #fff">
   <div>
-    <h1>Petição inicial</h1>
+    <h1>Requerimento inicial</h1>
 
    
 

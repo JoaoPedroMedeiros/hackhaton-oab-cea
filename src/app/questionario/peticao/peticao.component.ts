@@ -39,19 +39,19 @@ export class PeticaoComponent extends PerguntaComponent {
   }
 
   fileEvent4(fileInput) {
-    this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
+    // this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
   }
 
   fileEvent3(fileInput) {
-    this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
+    // this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
   }
 
   fileEvent2(fileInput) {
-    this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
+    // this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
   }
 
   fileEvent1(fileInput) {
-    this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
+    // this.respostaService.getRespostas().provas.push(fileInput.srcElement.files[0]);
   }
 
   pdf() {
@@ -139,12 +139,10 @@ export class PeticaoComponent extends PerguntaComponent {
     pdf.addSubtitleSection4("Meus direitos");
     pdf.addContentSection4();
 
-    if (this.respostaService.getRespostas().provas.length > 0)
-      pdf.addImages(this.respostaService.getRespostas().provas, () => {
-        pdf.save();
-      });
-    else
-      pdf.save();
+    // pdf.addImages(this.respostaService.getRespostas().provas, () => {
+    //   pdf.save();
+    // });
+
     // pdf.save();
 
     // pdf.line();

@@ -14,6 +14,22 @@ export class ProvasComponent extends PerguntaComponent {
     super(respostaService);
   }
 
+  comprovantePagamento(event) {
+    this.respostaService.getRespostas().provas.comprovantePagamento = event.srcElement.files[0];
+  }
+
+  comprovanteSerasa(event) {
+    this.respostaService.getRespostas().provas.comprovanteNegativacao = event.srcElement.files[0];
+  }
+
+  contratoFatura(event) {
+    this.respostaService.getRespostas().provas.contratoFatura = event.srcElement.files[0];
+  }
+
+  outraProva(event) {
+    this.respostaService.getRespostas().provas.outraProva = event.srcElement.files[0];
+  }
+
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     return true;
   }

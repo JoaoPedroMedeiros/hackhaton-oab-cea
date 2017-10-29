@@ -1,6 +1,6 @@
 export class DadosCliente {
 
-  nome: string = 'Amigo(a)';
+  nome: string = '';
   sobrenome: string;
   rg: string;
   orgaoExpeditor: string;
@@ -13,7 +13,6 @@ export class DadosCliente {
   numero: string;
   complemento: string;
   bairro: string;
-  estado: string;
   cidade: string;
   email: string;
   senha: string;

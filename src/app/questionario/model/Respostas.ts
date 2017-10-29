@@ -2,6 +2,7 @@ import { DadosCliente } from "./DadosCliente";
 import { CorpoPeticao } from "./CorpoPeticao";
 import { Empresa } from "./Empresa";
 import { ValorParcial } from "./ValorParcial";
+import { Provas } from "./Provas";
 
 export class Respostas {
 
@@ -34,9 +35,9 @@ export class Respostas {
   public valor: number;
 
   /**
-   * Provas anexadas
+   * Provas
    */
-  public provas: any[] = [];
+  public provas: Provas;
 
   public empresa: Empresa;
 
@@ -45,6 +46,7 @@ export class Respostas {
     this.empresa = new Empresa(null, null);
     this.valorParcial = new ValorParcial();
     this.corpoPeticao = new CorpoPeticao();
+    this.provas = new Provas();
   }
 
   problemaString(): string {

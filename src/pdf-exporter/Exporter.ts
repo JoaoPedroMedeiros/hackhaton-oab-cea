@@ -176,30 +176,79 @@ export class Exporter {
     this.pdf.text(text, this.marginLeft + 80 + 25, this.maginTitle + this.spaceItem * n);
   }
 
-  addImages(images: any, callback) {
-    var count = 1;
+  addImages(images: any, titulos: string[], callback) {
+    var count = 0;
+    var imgArray = [];
     for (let i = 0; i < images.length; i++) {
-      var img = new Image;
-      img.onload = () => {
-        let oldWidth = img.width;
-        let proportion = oldWidth / 720;
-        img.width = 720;
-        img.height = img.height / proportion; 
-
-        this.pdf.addPage();
-        this.pdf.addImage(img, 10, 30);
-        count++;
-
-        if (count === images.length)
-          callback();
-      }
+      let img = new Image;
+      imgArray.push(img);
       img.crossOrigin = "";
       img.src = URL.createObjectURL(images[i]);
+
+      // var img = new Image;
+      // img.onload = () => {
+      //   let oldWidth = img.width;
+      //   let proportion = oldWidth / 720;
+      //   img.width = 720;
+      //   img.height = img.height / proportion; 
+
+      //   this.pdf.addPage();
+      //   this.pdf.addImage(img, 10, 30);
+      //   count++;
+
+      //   console.log(count);
+
+      //   if (count === images.length) {
+      //     callback();
+      //   }
+      // }
+      // img.crossOrigin = "";
+      // img.src = URL.createObjectURL(images[i]);
     }
+    
+    var intervalo = window.setInterval(() => {
+      for (let i = 0; i < imgArray.length; i++) {
+        let oldWidth = imgArray[i].width;
+        let proportion = oldWidth / 720;
+        imgArray[i].width = 720;
+        imgArray[i].height = imgArray[i].height / proportion; 
+
+        this.pdf.addPage();
+        this.pdf.setFontSize(12);
+        this.pdf.setFontType("bold");
+        this.pdf.text(titulos[i], 10, 20);
+        this.pdf.setFontType("normal");
+        this.pdf.addImage(imgArray[i], 10, 30);
+      }
+      window.clearInterval(intervalo);
+      callback();
+    }, 2000);
+    
+    // var count = 0;
+    // for (let i = 0; i < images.length; i++) {
+    //   var img = new Image;
+    //   img.onload = () => {
+    //     let oldWidth = img.width;
+    //     let proportion = oldWidth / 720;
+    //     img.width = 720;
+    //     img.height = img.height / proportion; 
+
+    //     this.pdf.addPage();
+    //     this.pdf.addImage(img, 10, 30);
+    //     count++;
+
+    //     console.log(count);
+
+    //     if (count === images.length) {
+    //       callback();
+    //     }
+    //   }
+    //   img.crossOrigin = "";
+    //   img.src = URL.createObjectURL(images[i]);
+    // }
   }
 
   save() {
-    console.log("dsaidhuasiudsha");
-    this.pdf.save();
+    this.pdf.save('Requerimento.pdf');
   }
 }

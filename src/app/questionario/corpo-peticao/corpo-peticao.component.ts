@@ -13,6 +13,8 @@ export class CorpoPeticaoComponent extends PerguntaComponent {
 
   respostas: Respostas;
 
+  aceito: boolean = false;
+
   public data = [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/];
 
   constructor(protected respostaService: RespostaService) {

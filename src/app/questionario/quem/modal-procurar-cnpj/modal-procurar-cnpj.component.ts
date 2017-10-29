@@ -9,12 +9,32 @@ import { Empresa } from '../../model/Empresa';
 })
 export class ModalProcurarCnpjComponent extends DialogComponent<any, Empresa> {
 
+  filtro: string = '';
+
   empresas: Empresa[] = [];
+
+  filtradas: Empresa[] = [];
 
   constructor(dialogService: DialogService) {
     super(dialogService);
 
     this.gerarEmpresas();
+  }
+
+  getEmpresas(): Empresa[] {
+    if (this.filtro === null || this.filtro === '') {
+      return this.empresas;
+    }
+
+    while (this.filtradas.pop());
+
+    // const filtradas: Empresa[] = [];
+    for (let i = 0; i < this.empresas.length; i++) {
+      if (this.empresas[i].razaosocial.toUpperCase().indexOf(this.filtro.toUpperCase()) > -1)
+        this.filtradas.push(this.empresas[i]);
+    }
+    
+    return this.filtradas;
   }
 
   retornar(empresa: Empresa) {
