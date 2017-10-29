@@ -139,10 +139,12 @@ export class PeticaoComponent extends PerguntaComponent {
     pdf.addSubtitleSection4("Meus direitos");
     pdf.addContentSection4();
 
-    pdf.addImages(this.respostaService.getRespostas().provas, () => {
+    if (this.respostaService.getRespostas().provas.length > 0)
+      pdf.addImages(this.respostaService.getRespostas().provas, () => {
+        pdf.save();
+      });
+    else
       pdf.save();
-    });
-
     // pdf.save();
 
     // pdf.line();

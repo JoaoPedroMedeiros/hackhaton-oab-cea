@@ -24,6 +24,20 @@ import { Valor40Component } from './valor40/valor40.component';
 import { PrecisaAdvogadoComponent } from './advogado/precisa-advogado/precisa-advogado.component';
 import { ListaAdvogadoComponent } from './advogado/lista-advogado/lista-advogado.component';
 import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.component';
+import { TextMaskModule } from 'angular2-text-mask';
+import { CurrencyMaskModule } from "ng2-currency-mask";
+import { CurrencyMaskConfig, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask/src/currency-mask.config';
+
+export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
+  align: "left",
+  allowNegative: true,
+  allowZero: true,
+  decimal: ",",
+  precision: 2,
+  prefix: "R$ ",
+  suffix: "",
+  thousands: "."
+};
 
 @NgModule({
   imports: [
@@ -31,6 +45,10 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
     RouterModule,
     FormsModule,
     HttpModule,
+
+    TextMaskModule,
+
+    CurrencyMaskModule,
 
     BootstrapModalModule,
     // É possível mudar o placeholder onde será aberto o modal importando
@@ -83,7 +101,8 @@ import { InfoAdvogadoComponent } from './advogado/info-advogado/info-advogado.co
     QuestionarioComponent
   ],
   providers: [
-    RespostaService
+    RespostaService,
+    { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig } 
   ]
 })
 export class QuestionarioModule { }

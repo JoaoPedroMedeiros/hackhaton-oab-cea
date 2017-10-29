@@ -13,6 +13,7 @@ export class DadosCliente {
   numero: string;
   complemento: string;
   bairro: string;
+  estado: string;
   cidade: string;
   email: string;
   senha: string;

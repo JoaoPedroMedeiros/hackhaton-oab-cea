@@ -17,7 +17,7 @@
       problemas.
     </h6>
     <div style="width:100%;" class="input-group">
-      <input type="text" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/>
+      <input type="text" [textMask]="{mask: cnpj}" (ngModelChange)="changeCnpj($event)" placeholder="Inserir CNPJ..." class="form-control input_int_100" name="nome" id="eNome" [(ngModel)]="empresa.cnpj"/>
     </div>
     <br>
     <div>

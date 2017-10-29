@@ -9,7 +9,7 @@
             <img class="img_logo" src="assets/img/icone_logo.png" alt="logo_icone"> Digite os dados abaixo</p>
     </div>
     <div style="width:100%;">
-        <input type="text" placeholder="Data do ocorrido" class="form-control input_int_100" name="dtOcorrido" id="eDtOcorrido"
+        <input type="text" [textMask]="{mask: data}" placeholder="Data do ocorrido" class="form-control input_int_100" name="dtOcorrido" id="eDtOcorrido"
             [(ngModel)]="respostas.corpoPeticao.data"/>
         <br>
         <textarea placeholder="Conte-nos a sua história. Tente ser o mais detalhista possível..." class="form-control txt_area_100"
@@ -23,7 +23,7 @@
     </div>
     <div style="width:100%;">
         <input type="text" placeholder="Valor da indenização" class="form-control input_int_100" name="vlIdenizacao" id="eVlIdenizacao"
-        [(ngModel)]="respostas.valor"/>
+        [(ngModel)]="respostas.valor" currencyMask/>
         <input type="checkbox" style="text-align:left !important; margin-top:10px; margin-bottom:10px;" name="chkConfirmar" id="cConfirmar"
         /> Afirmo que todas as informações declaradas são verdadeiras estando de acordo com Termos e Condições.
         <br>
